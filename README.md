@@ -1,29 +1,37 @@
-# New Project
+# blog
 
-> ✨ Bootstrapped with Create Snowpack App (CSA).
+#### 介绍
 
-## Available Scripts
+my blog
 
-### npm start
+#### 软件架构
 
-Runs the app in the development mode.
-Open http://localhost:8080 to view it in the browser.
+软件架构说明
 
-The page will reload if you make edits.
-You will also see any lint errors in the console.
+#### 安装教程
 
-### npm test
+1.  xxxx
+2.  xxxx
+3.  xxxx
 
-Launches the test runner in the interactive watch mode.
-See the section about running tests for more information.
+#### 使用说明
 
-### npm run build
+1.  xxxx
+2.  xxxx
+3.  xxxx
 
-Builds a static copy of your site to the `build/` folder.
-Your app is ready to be deployed!
+#### 参与贡献
 
-**For the best production performance:** Add a build bundler plugin like "@snowpack/plugin-webpack" or "@snowpack/plugin-parcel" to your `snowpack.config.json` config file.
+1.  Fork 本仓库
+2.  新建 Feat_xxx 分支
+3.  提交代码
+4.  新建 Pull Request
 
-### Q: What about Eject?
+#### 码云特技
 
-No eject needed! Snowpack guarantees zero lock-in, and CSA strives for the same.
+1.  使用 Readme_XXX.md 来支持不同的语言，例如 Readme_en.md, Readme_zh.md
+2.  码云官方博客 [blog.gitee.com](https://blog.gitee.com)
+3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解码云上的优秀开源项目
+4.  [GVP](https://gitee.com/gvp) 全称是码云最有价值开源项目，是码云综合评定出的优秀开源项目
+5.  码云官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
+6.  码云封面人物是一档用来展示码云会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
