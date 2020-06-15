@@ -7,7 +7,7 @@ import '@/style.less'
 
 const App = () => {
   return (
-    <Router basename="blog">
+    <Router>
       <Switch>
         <Route path="/" component={Home} exact />
         <Route path="/detail" component={Detail} exact />
