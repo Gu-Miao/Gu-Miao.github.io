@@ -9,7 +9,7 @@
     "start": "cross-env PORT=5000 craco start",
     "build": "cross-env GENERATE_SOURCEMAP=false craco build"
   },
-  "homepage": ".",
+  "homepage": "/blog/",
   "eslintConfig": {
     "extends": "react-app"
   },
