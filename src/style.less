@@ -6,18 +6,6 @@ html {
   font-size: 20px;
 }
 @font-face {
-  font-family: 'Some Weatz Swashes';
-  src: url('~@assets/fonts/Some Weatz Swashes.ttf');
-}
-@font-face {
-  font-family: 'Cenobyte';
-  src: url('~@assets/fonts/Cenobyte.ttf');
-}
-@font-face {
-  font-family: Shardee;
-  src: url('~@assets/fonts/Shardee.ttf');
-}
-@font-face {
   font-family: Quadaptor;
   src: url('~@assets/fonts/Quadaptor.ttf');
 }
@@ -25,36 +13,64 @@ html {
   font-family: Carrington;
   src: url('~@assets/fonts/Carrington.ttf');
 }
+::selection {
+  color: #000;
+  background: #fff;
+}
 body {
-  font-family: Carrington, Quadaptor, Shardee, 'Cenobyte', 'Some Weatz Swashes', -apple-system,
-    BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans',
-    'Droid Sans', 'Helvetica Neue', sans-serif;
+  font-family: Carrington, -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
   font-weight: normal;
   font-size: 1.5rem;
   letter-spacing: 2px;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   user-select: none;
-
-  color: #000;
-  background: #fff;
+  color: #fff;
+  background: #222;
   line-height: 1.57;
 }
-code {
-  background: #fab1a0;
-  color: #e67e22;
-  padding: 0.1rem 0.2rem;
-  font-size: 0.8em;
-  margin: 0 0.2rem;
-  border-radius: 0.1rem;
+pre {
+  display: inline-block;
+  color: #9b59b6;
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-  &.link {
-    cursor: pointer;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
 }
 ul {
-  list-style: none;
+  list-style: disc;
+}
+a {
+  @color: #f39c12;
+  @hover: #d35400;
+  @duration: 0.5s;
+  color: @color;
+  text-decoration: none;
+  transition: color @duration linear;
+  margin-right: 1rem;
+  position: relative;
+  text-align: center;
+  &::after {
+    display: block;
+    content: '';
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    width: 0%;
+    height: 3px;
+    background: @color;
+    transform: translateX(50%);
+    transition-timing-function: ease-in-out;
+    transition-duration: @duration;
+    transition-property: transform, width, background-color;
+  }
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover {
+    color: @hover;
+    &::after {
+      width: 100%;
+      transform: translateX(0);
+      background-color: @hover;
+    }
+  }
 }
