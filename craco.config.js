@@ -8,7 +8,6 @@ module.exports = {
     alias: {
       '@@': pathResolve('.'),
       '@': pathResolve('src'),
-      '@articles': pathResolve('src/articles'),
       '@assets': pathResolve('src/assets'),
       '@common': pathResolve('src/common'),
       '@components': pathResolve('src/components'),

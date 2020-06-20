@@ -1,2 +1,27 @@
 #home {
+  height: 100vh;
+  overflow: hidden;
+  #welcome {
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .welcome {
+      color: #fff;
+      width: 100%;
+      text-align: center;
+      text-overflow: clip;
+      animation: welcome 2s forwards linear;
+      @keyframes welcome {
+        from {
+          width: 0;
+        }
+        to {
+          width: 100%;
+        }
+      }
+    }
+  }
 }

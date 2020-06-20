@@ -11,7 +11,7 @@ const Layout = ({ children, id, title }) => {
       <nav>
         <img src={logo} alt="logo" draggable="false" />
         <ul>
-          {/* <li>Articles</li> */}
+          <li>Home</li>
           <li>About</li>
         </ul>
       </nav>

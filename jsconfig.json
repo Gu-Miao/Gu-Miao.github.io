@@ -4,7 +4,6 @@
     "paths": {
       "@@/*": ["./*"],
       "@/*": ["src/*"],
-      "@articles": ["articles/*"],
       "@assets/*": ["src/assets/*"],
       "@common/*": ["src/common"],
       "@components/*": ["src/components/*"],
