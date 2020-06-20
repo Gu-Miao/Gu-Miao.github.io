@@ -1,19 +1,20 @@
 {
   "files": {
-    "main.css": "/static/css/main.0238b396.chunk.css",
-    "main.js": "/static/js/main.d8e0a359.chunk.js",
+    "main.css": "/static/css/main.d040f8fd.chunk.css",
+    "main.js": "/static/js/main.becc834c.chunk.js",
     "runtime-main.js": "/static/js/runtime-main.5eeb4e9f.js",
-    "static/js/2.5e93d4ab.chunk.js": "/static/js/2.5e93d4ab.chunk.js",
+    "static/js/2.2acfef67.chunk.js": "/static/js/2.2acfef67.chunk.js",
     "index.html": "/index.html",
-    "precache-manifest.5047bdf5f7f0bc0ae23cf8fe1558c83a.js": "/precache-manifest.5047bdf5f7f0bc0ae23cf8fe1558c83a.js",
+    "precache-manifest.0d49562b2ae0bf97d51438d4345be915.js": "/precache-manifest.0d49562b2ae0bf97d51438d4345be915.js",
     "service-worker.js": "/service-worker.js",
-    "static/js/2.5e93d4ab.chunk.js.LICENSE.txt": "/static/js/2.5e93d4ab.chunk.js.LICENSE.txt",
-    "static/media/logo.png": "/static/media/logo.900b7ac6.png"
+    "static/js/2.2acfef67.chunk.js.LICENSE.txt": "/static/js/2.2acfef67.chunk.js.LICENSE.txt",
+    "static/media/style.less": "/static/media/Quadaptor.f4d3c0d5.ttf",
+    "static/media/avatar.png": "/static/media/avatar.d0e23052.png"
   },
   "entrypoints": [
     "static/js/runtime-main.5eeb4e9f.js",
-    "static/js/2.5e93d4ab.chunk.js",
-    "static/css/main.0238b396.chunk.css",
-    "static/js/main.d8e0a359.chunk.js"
+    "static/js/2.2acfef67.chunk.js",
+    "static/css/main.d040f8fd.chunk.css",
+    "static/js/main.becc834c.chunk.js"
   ]
 }
