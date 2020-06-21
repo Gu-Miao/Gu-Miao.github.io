@@ -1,20 +1,22 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState } from 'react'
 import { Link } from 'react-router-dom'
 import classnames from 'classnames'
 import { githubURL, blogURL, username, phone, email } from '@common/project.json'
+import useTitle from '@hooks/useTitle'
 import photo from '@assets/images/avatar.png'
 import '@pages/Home/home.less'
 
 const Home = () => {
+  useTitle('GuTianhuang')
   const [showWelcome, setshowWelcome] = useState(true)
   const [renderWelcome, setRenderWelcome] = useState(true)
-  useEffect(() => {}, [])
+  const [showContent, setShowContent] = useState(false)
   const welcomeClass = classnames({ fade: !showWelcome })
-  const hndleAnmtionEnd = () => {
-    setshowWelcome(false)
-  }
+  const contentClass = classnames({ content: true, show: showContent })
+  const hndleAnmtionEnd = () => setshowWelcome(false)
   const handleWelcomeFade = () => {
     setRenderWelcome(false)
+    setShowContent(true)
   }
   return (
     <div id="home">
@@ -25,7 +27,7 @@ const Home = () => {
           </h1>
         </div>
       )}
-      <div className="content">
+      <div className={contentClass}>
         <div className="summary">
           <p>A front-end developer, a doer of open source technology, a heavy react user.</p>
           <ul>
@@ -46,7 +48,7 @@ const Home = () => {
           </div>
         </div>
         <div className="me">
-          <img src={photo} alt="@GuTinhuang" />
+          <img src={photo} alt="@GuTinhuang" draggable="false" />
           <p>{username}</p>
           <p>{phone}</p>
           <p>{email}</p>

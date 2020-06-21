@@ -1,21 +1,43 @@
 #about {
   height: 100vh;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  .fadeIn(@delay:0s) {
+    opacity: 0;
+    transform: translateY(10rem);
+    animation: fadeIn 1.2s ease-in-out @delay forwards;
+  }
   h1 {
     font-family: Quadaptor;
+    .fadeIn();
   }
-  .des {
+  .box {
     width: 30rem;
-    user-select: text;
-  }
-  ul {
-    margin-bottom: 5rem;
-    user-select: text;
+    .des {
+      user-select: text;
+      .fadeIn(0.25s);
+    }
+    ul {
+      margin-bottom: 5rem;
+      user-select: text;
+      .fadeIn(0.5s);
+    }
   }
   .copyright {
     font-family: Quadaptor;
+    .fadeIn(0.75s);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
