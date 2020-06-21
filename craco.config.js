@@ -10,12 +10,8 @@ module.exports = {
       '@': pathResolve('src'),
       '@assets': pathResolve('src/assets'),
       '@common': pathResolve('src/common'),
-      '@components': pathResolve('src/components'),
       '@hooks': pathResolve('src/hooks'),
-      '@layout': pathResolve('src/layout'),
-      '@pages': pathResolve('src/pages'),
-      '@store': pathResolve('src/store'),
-      '@utils': pathResolve('src/utils')
+      '@pages': pathResolve('src/pages')
     }
   },
   babel: {
