@@ -1,11 +1,11 @@
 import React, { Suspense, lazy } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Home from '@pages/Home'
+import Home from '@pages/home'
 import Loading from '@components/Loading'
 import '@/style.less'
 
-const About = lazy(() => import('@pages/About'))
-const Error = lazy(() => import('@pages/Error'))
+const About = lazy(() => import('@pages/about'))
+const Error = lazy(() => import('@pages/error'))
 
 const App = () => {
   return (
