@@ -1,0 +1,114 @@
+#home {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  #welcome {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: opacity 1s ease-in-out;
+    opacity: 1;
+    &.fade {
+      opacity: 0;
+    }
+    .welcome {
+      font-size: 2em;
+      letter-spacing: 4px;
+      font-family: Quadaptor;
+      text-transform: uppercase;
+      background: linear-gradient(90deg, #fff 0%, #fff 100%);
+      background-size: 0;
+      background-repeat: no-repeat;
+      color: transparent;
+      background-clip: text;
+      animation: welcome 2.5s ease-in-out forwards;
+    }
+  }
+  .content {
+    width: 100%;
+    height: 100%;
+    background: #222;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5rem;
+    box-sizing: border-box;
+    .fade() {
+      transition-property: transform, opacity;
+      transition-duration: 1.5s;
+      transition-timing-function: ease-in-out;
+      opacity: 0;
+    }
+    .fadeIn() {
+      transform: translate(0, 0);
+      opacity: 1;
+    }
+    .summary {
+      width: 30rem;
+      p {
+        user-select: text;
+        .fade();
+        transform: translateY(-10rem);
+      }
+      ul {
+        font-family: Quadaptor;
+        text-transform: uppercase;
+        margin-bottom: 1rem;
+        transform: translateX(-10rem);
+        .fade();
+        li {
+          margin-left: 1rem;
+          user-select: text;
+        }
+      }
+      a {
+        font-family: Helveticaa;
+        text-transform: uppercase;
+        .fade();
+      }
+    }
+    .me {
+      text-align: right;
+      font-family: Carrington;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-end;
+      img {
+        display: block;
+        width: 16rem;
+        border-radius: 20px;
+        margin-bottom: 1rem;
+        transform: translateX(10rem);
+        .fade();
+      }
+      p {
+        user-select: text;
+        transform: translateY(10rem);
+        .fade();
+      }
+    }
+    &.show {
+      p,
+      ul,
+      a,
+      img {
+        .fadeIn();
+      }
+    }
+  }
+}
+@keyframes welcome {
+  from {
+    background-size: 0;
+  }
+  to {
+    background-size: 100%;
+    text-shadow: 0 0 0.5rem #f0f0f0;
+  }
+}
