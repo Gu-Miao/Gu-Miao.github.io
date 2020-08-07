@@ -10,6 +10,7 @@ module.exports = {
       '@': pathResolve('src'),
       '@assets': pathResolve('src/assets'),
       '@common': pathResolve('src/common'),
+      '@components': pathResolve('src/components'),
       '@hooks': pathResolve('src/hooks'),
       '@pages': pathResolve('src/pages')
     }
