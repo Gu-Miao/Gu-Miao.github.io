@@ -1,5 +1,5 @@
 import React from 'react'
-import '@pages/Error/error.less'
+import './style.less'
 
 const Error = () => {
   return (

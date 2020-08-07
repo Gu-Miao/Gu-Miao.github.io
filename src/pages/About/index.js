@@ -1,7 +1,7 @@
 import React from 'react'
 import { projectURL, issuesURL, spaGitPageURL, licenseURL } from '@common/project.json'
 import useTitle from '@hooks/useTitle'
-import '@pages/About/about.less'
+import './style.less'
 
 const About = () => {
   useTitle('About')

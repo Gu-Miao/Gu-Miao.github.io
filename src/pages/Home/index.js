@@ -4,7 +4,7 @@ import classnames from 'classnames'
 import { githubURL, blogURL, username, phone, email } from '@common/project.json'
 import useTitle from '@hooks/useTitle'
 import photo from '@assets/images/avatar.png'
-import '@pages/Home/home.less'
+import './style.less'
 
 const Home = () => {
   useTitle('GuTianhuang')
