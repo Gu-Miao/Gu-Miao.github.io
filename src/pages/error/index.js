@@ -1,7 +1,9 @@
 import React from 'react'
+import useTitle from '@hooks/useTitle'
 import './style.less'
 
 const Error = () => {
+  useTitle('error')
   return (
     <div id="error">
       <h1>Some went wrong!</h1>
