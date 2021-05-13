@@ -1,23 +1,21 @@
-import React, { Suspense, lazy } from 'react'
+import React from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import Home from '@pages/home'
-import Loading from '@components/Loading'
+import AsyncComponent from '@components/AsyncComponent'
 import '@/style.less'
 
-const About = lazy(() => import('@pages/about'))
-const Error = lazy(() => import('@pages/error'))
+const About = AsyncComponent('about')
+const Error = AsyncComponent('error')
 
 const App = () => {
   return (
-    <Suspense fallback={<Loading />}>
-      <Router>
-        <Switch>
-          <Route path="/" component={Home} exact />
-          <Route path="/about" component={About} exact />
-          <Route component={Error} />
-        </Switch>
-      </Router>
-    </Suspense>
+    <Router>
+      <Switch>
+        <Route path="/" component={Home} exact />
+        <Route path="/about" component={About} exact />
+        <Route component={Error} />
+      </Switch>
+    </Router>
   )
 }
 
