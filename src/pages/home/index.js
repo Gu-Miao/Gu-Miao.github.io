@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect, useMemo } from 'react'
 import { Link } from 'react-router-dom'
 import classnames from 'classnames'
 import { githubURL, blogURL, username, phone, email } from '@common/project.json'
@@ -6,23 +6,41 @@ import useTitle from '@hooks/useTitle'
 import photo from '@assets/images/avatar.png'
 import './style.less'
 
+let timer = null
+
 const Home = () => {
   useTitle('GuTianhuang')
-  const [showWelcome, setshowWelcome] = useState(true)
+
+  const welcomed = useMemo(() => sessionStorage.getItem('welcomed') === 'true', [])
+
+  const [showWelcome, setshowWelcome] = useState(!welcomed)
   const [renderWelcome, setRenderWelcome] = useState(true)
   const [showContent, setShowContent] = useState(false)
+
   const welcomeClass = classnames({ fade: !showWelcome })
   const contentClass = classnames({ content: true, show: showContent })
-  const hndleAnmtionEnd = () => setshowWelcome(false)
-  const handleWelcomeFade = () => {
-    setRenderWelcome(false)
-    setShowContent(true)
+
+  useEffect(() => {
+    welcomed && handleWelcomeFade()
+    return () => timer && clearTimeout(timer)
+  }, [welcomed])
+
+  const handleAnmtionEnd = () => {
+    setshowWelcome(false)
+    sessionStorage.setItem('welcomed', 'true')
   }
+  const handleWelcomeFade = () => {
+    timer = setTimeout(() => {
+      setRenderWelcome(false)
+      setShowContent(true)
+    }, 0.3 * 1000)
+  }
+
   return (
     <div id="home">
       {renderWelcome && (
         <div id="welcome" className={welcomeClass} onTransitionEnd={handleWelcomeFade}>
-          <h1 className="welcome" onAnimationEnd={hndleAnmtionEnd}>
+          <h1 className="welcome" onAnimationEnd={handleAnmtionEnd}>
             Welcome to my Home.
           </h1>
         </div>
